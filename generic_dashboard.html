@@ -1,0 +1,372 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>لوحة معلومات مشاريع بهجة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Noto+Kufi+Arabic:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f6f6;--card:#fff;--tx:#12292c;--mu:#5c797b;--ac:#2f8f89;--ac2:#123039;--bd:#d7e6e5;--sea:#dcedef;--land:#eef3ee;--hd1:#3c908c;--hd2:#10343c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101a1a;--card:#16221f;--tx:#e6f1ef;--mu:#93b1ae;--ac:#4fc8bf;--ac2:#9fc3c9;--bd:#254240;--sea:#0f2a2e;--land:#16302f;--hd1:#1f6d69;--hd2:#0a1f24}}
+:root[data-theme="dark"]{--bg:#101a1a;--card:#16221f;--tx:#e6f1ef;--mu:#93b1ae;--ac:#4fc8bf;--ac2:#9fc3c9;--bd:#254240;--sea:#0f2a2e;--land:#16302f;--hd1:#1f6d69;--hd2:#0a1f24}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Tajawal','Segoe UI',Tahoma,Arial,sans-serif;padding:12px}
+h1{font-size:20px;margin:4px 0 2px}.sub{color:var(--mu);font-size:12px;margin-bottom:10px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+select,button{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:7px 10px;font:inherit;font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:10px}
+.k,.c{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px}
+.k b{display:block;font-size:24px;color:var(--ac)}.k span{font-size:12px;color:var(--mu)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media(max-width:760px){.grid{grid-template-columns:1fr}}.c{height:340px;display:flex;flex-direction:column}.c.mp{height:560px}.bd{flex:1;min-height:0;overflow:auto}.w{grid-column:1/-1}svg text.ml{fill:var(--tx);font-size:10px;font-weight:600;text-anchor:middle;paint-order:stroke;stroke:var(--card);stroke-width:3px}#mp text{pointer-events:none}#mp polygon{cursor:pointer}
+.c h2{font-size:14px;margin:0 0 8px}.sc{max-height:460px;overflow-y:auto}
+.r{display:grid;grid-template-columns:120px 1fr 64px;gap:6px;align-items:center;font-size:12px;margin:4px 0}
+.r i{display:block;height:12px;border-radius:6px;background:var(--bd);overflow:hidden}.r i u{display:block;height:100%;background:var(--ac)}
+.r em{font-style:normal;color:var(--mu);text-align:start;font-size:11px}
+.q{flex:1;min-width:200px;background:var(--card);color:var(--tx);border:1px solid var(--ac);border-radius:8px;padding:7px 10px;font:inherit;font-size:13px}.w{grid-column:1/-1}table{width:100%;border-collapse:collapse;font-size:12px}td,th{padding:5px 6px;border-bottom:1px solid var(--bd);text-align:start}th{color:var(--mu)}svg text{fill:var(--mu);font-size:10px}.n{font-size:11px;color:var(--mu);margin-top:6px}.c h2{display:flex;justify-content:space-between;align-items:center;gap:6px}.e,.up{cursor:pointer;font-size:11px;padding:3px 8px;border-radius:6px;border:1px solid var(--bd);background:var(--card);color:var(--tx);white-space:nowrap}.up{font-size:13px;padding:7px 10px;border-radius:8px;border-color:var(--ac)}.hd{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,var(--hd1),var(--hd2));color:#fff;border-radius:12px;padding:12px 16px;margin-bottom:10px}.hd img{height:54px;width:auto}.hd h1{margin:0;font-size:22px;font-family:'Noto Kufi Arabic','Tajawal',sans-serif;font-weight:900}.hd .sub{color:#cdeae6;margin:3px 0 0}.mp .bd{position:relative}.zc{position:absolute;top:8px;left:8px;display:flex;flex-direction:column;gap:4px;z-index:2}.zc button{width:30px;height:30px;font-size:16px;padding:0}.lg{display:inline-block;width:80px;height:8px;border-radius:4px;vertical-align:middle;background:linear-gradient(90deg,transparent,var(--ac)),var(--land)}#mp{cursor:grab}@media(max-width:600px){body{padding:8px}.hd{padding:10px 12px;gap:10px}.hd img{height:42px}.hd h1{font-size:17px}.hd .sub{font-size:11px}
+.bar>*{flex:1 1 44%;min-height:40px}.bar .q{flex:1 1 100%}select,.q,button,.up{font-size:16px}.e{font-size:12px;min-height:30px;padding:4px 10px}
+.kpis{grid-template-columns:repeat(2,1fr)}.kpis .k:last-child:nth-child(odd){grid-column:1/-1}.k b{font-size:22px}
+.c{height:auto}.c .bd{max-height:380px}.c.mp{height:auto}.c.mp .bd{height:420px;max-height:none}.c h2{flex-wrap:wrap}
+.r{grid-template-columns:96px 1fr 62px}.zc button{width:38px;height:38px;font-size:18px}svg text.ml{font-size:13px}svg.zo .mv{display:none}
+input[type=range]{width:110px}}
+#mp{touch-action:none}#lm{position:absolute;inset:0;visibility:hidden;z-index:1;border-radius:8px}.lb{background:transparent;border:0;box-shadow:none;font-weight:700;font-size:11px;color:#111;text-align:center;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff}.lb:before{display:none}.tp{position:absolute;display:none;z-index:3;pointer-events:none;background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:6px 10px;font-size:12px;line-height:1.7;box-shadow:0 2px 10px rgba(0,0,0,.25);max-width:240px}#mp path[data-mi]:hover,#mp ellipse[data-mi]:hover{stroke:var(--ac2);stroke-width:3}.dz{border:2px dashed var(--ac);border-radius:12px;padding:22px;text-align:center;color:var(--mu);cursor:pointer;background:var(--card);margin-bottom:10px}.dz.drag{background:var(--sea)}.dz b{color:var(--tx)}.badge{display:inline-block;background:var(--bd);color:var(--tx);border-radius:6px;padding:1px 7px;font-size:11px;margin-inline-start:6px}.warn{background:var(--card);border:1px solid #d99;color:#a33;border-radius:8px;padding:8px 12px;font-size:12px;margin-bottom:10px}@media(prefers-color-scheme:dark){.warn{color:#f3a}}.tbl-wrap{overflow:auto;max-height:420px}</style></head><body>
+<header class="hd"><img src="data:image/png;base64,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" alt="PMO مكتب إدارة المشاريع"><div><h1 id="ttl">لوحة تحليل البيانات</h1><div class="sub" id="src">ارفع أي ملف إكسل لتحليله تلقائياً</div></div></header>
+
+<script>
+(function(){
+var srcs=['https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js','https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js','https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js'];
+var i=0;
+function tryLoad(){
+if(i>=srcs.length)return;
+var s=document.createElement('script');
+s.src=srcs[i];
+s.onerror=function(){i++;tryLoad()};
+document.head.appendChild(s);
+}
+tryLoad();
+})();
+</script>
+<div id="app"></div>
+<script>
+const DEFAULT_DS={"headers": ["م", "بلدية", "اسم المشروع", "نوع المشروع", "التصنيف", "نسبة الإنجاز", "حالة إعتماد التصاميم", "الملاحظات", "حالة توقيع عقود الإستثمار", "حالة توقيع عقود المشاركة المجتمعية"], "rows": [[1, "أمانة جازان", "طريق الملك عبدالعزيز1", "تدخل حضري", "إنشاء ذاتي", 0.1, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [2, "أمانة جازان", "طريق الملك عبدالعزيز2", "تدخل حضري", "إنشاء ذاتي", 0.1, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [3, "أمانة جازان", "طريق الملك عبدالعزيز3", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "لم يتم البدء بالتنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [4, "أمانة جازان", "طريق الملك عبدالعزيز4", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "لم يتم البدء بالتنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [5, "أمانة جازان", "طريق مكة", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "لم يتم البدء بالتنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [6, "أمانة جازان", "طريق المطار", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "لم يتم البدء بالتنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [7, "أمانة جازان", "حديقة حي الروضة", "حديقة", "إنشاء ذاتي", 0.85, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [8, "أمانة جازان", "حديقة حي النور", "حديقة", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [9, "أمانة جازان", "حديقة حي السويس 19 ", "حديقة", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [10, "أمانة جازان", "حديقة حي السويس -14", "حديقة", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [11, "أمانة جازان", "حديقة حي النسيم", "حديقة", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [12, "أمانة جازان", "حديقة حي المطار 24", "حديقة", "إنشاء ذاتي", 0.6, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [13, "أمانة جازان", "حديقة الحي مخطط 7- رقم 9", "حديقة", "إنشاء ذاتي", 0, "معتمد", "لم يتم البدء بالتنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [14, "أمانة جازان", "حديقة مخطط7-رقم 5", "حديقة", "إنشاء ذاتي", 0, "معتمد", "لم يتم البدء بالتنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [15, "بلدية الحرث", "طريق مدخل العين الحارة", "تدخل حضري", "إنشاء ذاتي", 0.05, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [16, "بلدية الحرث", "حديقة العين الحارة", "حديقة", "إنشاء ذاتي", 0.2, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [17, "بلدية الحرث", "الحديقة الشمالية ", "حديقة", "إنشاء ذاتي", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [18, "بلدية الحقو", "طريق الأمير سلطان", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [19, "بلدية الحقو", "حديقة الإسكان", "حديقة", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [20, "بلدية الحقو", "حديقة الحقو", "حديقة", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [21, "بلدية الداير", "طريق الشارع العام", "تدخل حضري", "إنشاء ذاتي", 0.21, "معتمد", "لا توجد تكاليف", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [22, "بلدية الداير", "تأهيل حديقة واجهة الداير", "حديقة", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف حسب إفادة البلدية بخطابهم رقم 4700744245 وسيتم طرحها فرصة إستثمارية", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [23, "بلدية الداير", "حديقة جبال الحشر", "حديقة", "مشاركة مجتمعية", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ12/4/2026"], [24, "بلدية الداير", "حديقة الفعاليات", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تحت إجراءات الطرح", "ـــــــــــــــــــــــ"], [25, "بلدية الدرب", "انشاء حديقة حي الواحة", "حديقة", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [26, "بلدية الدرب", "انشاء حديقة حي السلام", "حديقة", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [27, "بلدية الدرب", "انشاء حديقة الروضة", "حديقة", "مشاركة مجتمعية", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [28, "بلدية الدرب", "تأهيل حديقة المملكة", "حديقة", "إستثمار", 0, "مرحلة المراجعة", "جاري اعتماد التصاميم", "تم الطرح", "ـــــــــــــــــــــــ"], [29, "بلدية الدرب", "تأهيل حديقة المديري", "حديقة", "إستثمار", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "تم الطرح", "ـــــــــــــــــــــــ"], [30, "بلدية الدرب", "تأهيل حديقة الجادة", "حديقة", "إستثمار", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "تم الطرح", "ـــــــــــــــــــــــ"], [31, "بلدية الدرب", "حديقة إسكان عتود", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم الطرح", "ـــــــــــــــــــــــ"], [32, "بلدية الدرب", "حديقة إسكان الغريف", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم الطرح", "ـــــــــــــــــــــــ"], [33, "بلدية الدرب", "طريق الملك عبدالعزيز 1", "تدخل حضري", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [34, "بلدية الدرب", "طريق الملك عبدالعزيز 2", "تدخل حضري", "إنشاء ذاتي", 0.05, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [35, "بلدية الدرب", "طريق حي الواحه 1", "تدخل حضري", "إنشاء ذاتي", 0.27, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [36, "بلدية الريث", "حديقة مقزع( الوشيلة )", "حديقة", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [37, "بلدية الريث", "حديقة مطل القمة", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم الطرح", "ـــــــــــــــــــــــ"], [38, "بلدية الريث", "منتزة السد", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم الطرح", "ـــــــــــــــــــــــ"], [39, "بلدية الريث", "حديقة عمود", "حديقة", "مشاركة مجتمعية", 0, "مرحلة المراجعة", "جاري اعتماد التصاميم", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [40, "بلدية الريث", "طريق الريث الحقو", "تدخل حضري", "إنشاء ذاتي", 0.4, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [41, "بلدية الريث", "ممشى مطل ملاطس", "تدخل حضري", "إنشاء ذاتي", 0.65, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [42, "بلدية السهي", "طريق ديحمه بالمقالي", "تدخل حضري", "إنشاء ذاتي", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [43, "بلدية السهي", "حديقة الواجهة البحرية", "حديقة", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [44, "بلدية السهي", "حديقة البلدية", "حديقة", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [45, "بلدية الشقيق", "التدخل الحضري بالشارع العام ", "تدخل حضري", "إنشاء ذاتي", 0, "مرحلة المراجعة", "جاري اعتماد التصاميم", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [46, "بلدية الشقيق", "حديقة الشقيق العامة", "حديقة", "إنشاء ذاتي", 0.33, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [47, "بلدية الطوال", "حديقة الطوال", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم الطرح", "ـــــــــــــــــــــــ"], [48, "بلدية الطوال", "حديقة الشمهانية", "حديقة", "إنشاء ذاتي", 0, "معتمد", "بسبب إعتراض المواطن ع الموقع المستهدف للتنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [49, "بلدية الطوال", "طريق الملك عبدالعزيز 2", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [50, "بلدية الطوال", "ممشى واجهة تعشر ( ممشى المركز الحضاري)", "تدخل حضري", "إنشاء ذاتي", 0.15, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [51, "بلدية الطوال", "حديقة الطوال الداخلية", "حديقة", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [52, "بلدية العارضة", "طريق المطل ( ممشى الشلال)", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [53, "بلدية العارضة", "حديقة إسكان الروان (7)", "حديقة", "مشاركة مجتمعية", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [54, "بلدية العارضة", "حديقة الرخه", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تحت إجراءات الطرح", "ـــــــــــــــــــــــ"], [55, "بلدية العارضة", "حديقة البلدية", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم توقيع عقد الإستثمار بتاريخ31/1/2026", "ـــــــــــــــــــــــ"], [56, "بلدية العارضة", "حديقة الحميراء  (حديقة الملك فهد )", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تحت إجراءات الطرح", "ـــــــــــــــــــــــ"], [57, "بلدية العارضة", "طريق الأمير سلطان 1", "تدخل حضري", "إنشاء ذاتي", 0.47, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [58, "بلدية العارضة", "طريق العين الحارة  ", "تدخل حضري", "إنشاء ذاتي", 0.4, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [59, "بلدية العارضة", "مطل العارضه", "حديقة", "إنشاء ذاتي", 0.73, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [60, "بلدية العالية", "حديقة حزام الخضراء ( حديقة ممشى العالية )", "حديقة", "إنشاء ذاتي", 0.9, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [61, "بلدية العالية", "حديقة جميما", "حديقة", "إنشاء ذاتي", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [62, "بلدية العالية", "حديقة الدهناء", "حديقة", "مشاركة مجتمعية", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [63, "بلدية العالية", "حديقة النقاش", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم الطرح", "ـــــــــــــــــــــــ"], [64, "بلدية العالية", "حديقة الحوامضة", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم الطرح", "ـــــــــــــــــــــــ"], [65, "بلدية العالية", "طريق السلامة الشارع العام", "تدخل حضري", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [66, "بلدية العيدابي", "حديقة عيبان", "حديقة", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [67, "بلدية العيدابي", "حديقة فوسان", "حديقة", "إنشاء ذاتي", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [68, "بلدية العيدابي", "حديقة حي الفقاس", "حديقة", "مشاركة مجتمعية", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [69, "بلدية العيدابي", "حديقة مخطط الإسكان م19 ", "حديقة", "إستثمار", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "تم الطرح", "ـــــــــــــــــــــــ"], [70, "بلدية العيدابي", "حديقة مخطط الإسكان م 17", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم الطرح", "ـــــــــــــــــــــــ"], [71, "بلدية العيدابي", "حديقة مخطط الإسكان م 18", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم الطرح", "ـــــــــــــــــــــــ"], [72, "بلدية العيدابي", "طريق الملك عبدالعزيز", "تدخل حضري", "إنشاء ذاتي", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [73, "بلدية القفل", "حديقة وادي ليه", "حديقة", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [74, "بلدية القفل", "حديقة الحقلة الشمالية", "حديقة", "إنشاء ذاتي", 0, "مرحلة المراجعة", "جاري اعتماد التصاميم", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [75, "بلدية القفل", "طريق الملك سلمان ( ممشى حزام القفل)", "تدخل حضري", "إنشاء ذاتي", 0.3, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [76, "بلدية المضايا", " الطريق العام ( ممشى طريق عثمان بن عفان)", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [77, "بلدية المضايا", "طريق الحزام الغربي", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [78, "بلدية المضايا", "حديقة السلام", "حديقة", "مشاركة مجتمعية", 0.75, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ19/2/2026"], [79, "بلدية المضايا", "حديقة مزهرة", "حديقة", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [80, "بلدية المضايا", "طريق البحر", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [81, "بلدية الموسم", "حديقة المجد", "حديقة", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف حسب إفادة البلدية بخطابهم رقم 4700658393", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [82, "بلدية الموسم", "ممشى البحر", "تدخل حضري", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [83, "بلدية الموسم", "حديقة الكدمي", "حديقة", "إنشاء ذاتي", 0.1, "معتمد", "لا توجد تكاليف حسب إفادة البلدية بخطابهم رقم 4700658393", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [84, "بلدية الموسم", "اللسان البحري", "تدخل حضري", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [85, "بلدية أبو عريش", "طريق الأمير سلطان 2", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [86, "بلدية أبو عريش", "طريق الملك فهد 1", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [87, "بلدية أبو عريش", "انشاء حديقة حي النزهه", "حديقة", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [88, "بلدية أبو عريش", "انشاء حديقة الروضة", "حديقة", "مشاركة مجتمعية", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ19/4/2026"], [89, "بلدية أبو عريش", "إنشاء حديقة مخطط القحمة ", "حديقة", "مشاركة مجتمعية", 0.85, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ29/3/2026"], [90, "بلدية أبو عريش", "حديقة مخطط الرح", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تحت إجراءات الطرح", "ـــــــــــــــــــــــ"], [91, "بلدية أبو عريش", "تأهيل حديقة الكلية ", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تحت إجراءات الطرح", "ـــــــــــــــــــــــ"], [92, "بلدية أبو عريش", "تأهيل حديقة الشهداء ", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تحت إجراءات الطرح", "ـــــــــــــــــــــــ"], [93, "بلدية أبو عريش", "تأهيل حديقة الخالدية ", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم توقيع عقد الإستثمار بتاريخ3/11/2025", "ـــــــــــــــــــــــ"], [94, "بلدية أبو عريش", "حديقة واجهة أبوعريش", "حديقة", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [95, "بلدية أحد المسارحة", "طريق الأمير محمد بن ناصر 1 ( الحزام الغربي )", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [96, "بلدية أحد المسارحة", "حديقة إسكان رمادة", "حديقة", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [97, "بلدية أحد المسارحة", "حديقة إسكان الحصمة", "حديقة", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [98, "بلدية أحد المسارحة", "حديقة المنجارة", "حديقة", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف حسب إفادة البلدية بخطابهم رقم 4700744961", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [99, "بلدية أحد المسارحة", "حديقة الصفا ( التاج )", "حديقة", "مشاركة مجتمعية", 0.56, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ29/1/2026"], [100, "بلدية أحد المسارحة", "حديقة البلدية", "حديقة", "إستثمار", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "تم توقيع عقد الإستثمار بتاريخ11/11/2025", "ـــــــــــــــــــــــ"], [101, "بلدية أحد المسارحة", "حديقة الجمال", "حديقة", "إستثمار", 0.24, "معتمد", "ـــــــــــــــــــــــ", "تم توقيع عقد الإستثمار بتاريخ30/1/2026", "ـــــــــــــــــــــــ"], [102, "بلدية أحد المسارحة", "الشارع العام طريق الملك عبدالله 1", "تدخل حضري", "إنشاء ذاتي", 0.36, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [103, "بلدية أحد المسارحة", "الشارع العام طريق الملك عبدالله 2", "تدخل حضري", "إنشاء ذاتي", 0.36, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [104, "بلدية أحد المسارحة", "حديقة الحصامة", "حديقة", "إنشاء ذاتي", 0.7, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [105, "بلدية بيش", "حديقة إسكان فلل الوزارة غرب", "حديقة", "مشاركة مجتمعية", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ7/4/2026"], [106, "بلدية بيش", "حديقة الحياه مخطط 83", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم توقيع عقد الإستثمار بتاريخ23/12/2025", "ـــــــــــــــــــــــ"], [107, "بلدية بيش", "حديقة الإسكان مخطط 92", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم الطرح", "ـــــــــــــــــــــــ"], [108, "بلدية بيش", "حديقة الضفة 1( حديقة بيش العامة)", "حديقة", "إستثمار", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "تم الطرح", "ـــــــــــــــــــــــ"], [109, "بلدية بيش", "حديقة الصفا ( حديقة الضفة 2 - (بيش العامة  )", "حديقة", "إنشاء ذاتي", 0.5, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [110, "بلدية بيش", "حديقة مخطط 54", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم الطرح", "ـــــــــــــــــــــــ"], [111, "بلدية بيش", "حديقة الريف مخطط 83", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم توقيع عقد الإستثمار بتاريخ21/4/2025", "ـــــــــــــــــــــــ"], [112, "بلدية بيش", "طريق الأمير محمد بن ناصر1", "تدخل حضري", "إنشاء ذاتي", 0.1, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [113, "بلدية بيش", "طريق الملك عبدالعزيز 1", "تدخل حضري", "إنشاء ذاتي", 0.7, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [114, "بلدية بيش", "طريق المستشفى القديم 1", "تدخل حضري", "إنشاء ذاتي", 0.7, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [115, "بلدية بيش", "حديقة مسلية مخطط 94", "حديقة", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [116, "بلدية بيش", "حديقة حي الخضراء ( النهضة2 )", "حديقة", "إنشاء ذاتي", 0.65, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [117, "بلدية بيش", "حديقة إسكان فلل الوزارة وسط - (حديقة مخطط الإسكان 63)", "حديقة", "إنشاء ذاتي", 0.1, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [118, "بلدية صامطة", "طريق الملك عبدالله 3", "تدخل حضري", "إنشاء ذاتي", 0, "مرحلة المراجعة", "جاري اعتماد التصاميم", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [119, "بلدية صامطة", "طريق إسكان الخارش1", "تدخل حضري", "إنشاء ذاتي", 0.1, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [120, "بلدية صامطة", "حديقة مجعر", "حديقة", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [121, "بلدية صامطة", "حديقة  إسكان الخارش  ", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم توقيع عقد الإستثمار بتاريخ28/4/2026", "ـــــــــــــــــــــــ"], [122, "بلدية صامطة", "حديقة أبو حجر", "حديقة", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "", ""], [123, "بلدية صامطة", "تشغيل حديقة الوادي", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم توقيع عقد الإستثمار بتاريخ1/12/2024", "ـــــــــــــــــــــــ"], [124, "بلدية صامطة", "تأهيل حديقة الشهداء", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم توقيع عقد الإستثمار بتاريخ9/5/2024", "ـــــــــــــــــــــــ"], [125, "بلدية صامطة", "تأهيل حديقة البلدية", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم توقيع عقد الإستثمار بتاريخ11/5/2024", "ـــــــــــــــــــــــ"], [126, "بلدية صامطة", "حديقة الدريعية", "حديقة", "مشاركة مجتمعية", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ2/1/2026"], [127, "بلدية صامطة", "حزام الدغارير 1", "تدخل حضري", "إنشاء ذاتي", 0.65, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [128, "بلدية صامطة", "تاهيل حديقة حطين", "حديقة", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [129, "بلدية صبيا", "حديقة نخلان", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم توقيع عقد الإستثمار بتاريخ27/11/2023", "ـــــــــــــــــــــــ"], [130, "بلدية صبيا", "حديقة ابو السلع", "حديقة", "مشاركة مجتمعية", 0.2, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [131, "بلدية صبيا", "حديقة الفيصلية", "حديقة", "مشاركة مجتمعية", 0.1, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ5/4/2026"], [132, "بلدية صبيا", "حديقة الظبية", "حديقة", "مشاركة مجتمعية", 0.1, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ11/5/2026"], [133, "بلدية صبيا", "حديقة النهضة", "حديقة", "مشاركة مجتمعية", 0.65, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ5/4/2026"], [134, "بلدية صبيا", "حديقة الملك فهد ", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم توقيع عقد الإستثمار بتاريخ25/9/2023", "ـــــــــــــــــــــــ"], [135, "بلدية صبيا", "حديقة الملك عبدالله ", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم الطرح", "ـــــــــــــــــــــــ"], [136, "بلدية صبيا", "حديقة المروج", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم توقيع عقد الإستثمار بتاريخ9/7/2024", "ـــــــــــــــــــــــ"], [137, "بلدية صبيا", "حديقة إسكان فلل الوزارة", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تحت إجراءات الطرح", "ـــــــــــــــــــــــ"], [138, "بلدية صبيا", "حديقة الصفا", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم الطرح", "ـــــــــــــــــــــــ"], [139, "بلدية صبيا", "طريق الملك عبدالعزيز ( المدخل الشمالي ) 1", "تدخل حضري", "إنشاء ذاتي", 0.39, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [140, "بلدية صبيا", "طريق الملك فهد 1", "تدخل حضري", "إنشاء ذاتي", 0.2, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [141, "بلدية صبيا", "طريق الملك فهد 2", "تدخل حضري", "إنشاء ذاتي", 0.1, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [142, "بلدية ضمد", "طريق الملك فهد 1", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [143, "بلدية ضمد", "طريق الملك فهد 2", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [144, "بلدية ضمد", "طريق الملك عبدالعزيز 1", "تدخل حضري", "إنشاء ذاتي", 0, "مرحلة المراجعة", "جاري اعتماد التصاميم", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [145, "بلدية ضمد", "حديقة مخطط الإسكان الرياحين", "حديقة", "مشاركة مجتمعية", 0.1, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ27/4/2025"], [146, "بلدية ضمد", "حديقة الشقيري", "حديقة", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [147, "بلدية ضمد", "حديقة الغروب", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم الطرح", "ـــــــــــــــــــــــ"], [148, "بلدية ضمد", "حديقة الحرجة", "حديقة", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [149, "بلدية ضمد", "حديقة القمري", "حديقة", "مشاركة مجتمعية", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [150, "بلدية ضمد", "حديقة السوق", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم الطرح", "ـــــــــــــــــــــــ"], [151, "بلدية فرسان", "حديقة الورود", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم توقيع عقد الإستثمار بتاريخ30/11/2025", "ـــــــــــــــــــــــ"], [152, "بلدية فرسان", "حديقة الشراع", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم توقيع عقد الإستثمار بتاريخ14/3/2023", "ـــــــــــــــــــــــ"], [153, "بلدية فرسان", "طريق الغدير", "تدخل حضري", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [154, "بلدية فرسان", "حديقة صير", "حديقة", "إنشاء ذاتي", 0.1, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [155, "بلدية فرسان", "حديقة المحرق", "حديقة", "إنشاء ذاتي", 0.35, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [156, "بلدية فيفا", "تأهيل حديقة قرضة", "حديقة", "مشاركة مجتمعية", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ31/3/2026"], [157, "بلدية فيفا", "حديقة النافورة ", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تم الطرح", "ـــــــــــــــــــــــ"], [158, "بلدية فيفا", "طريق الملك عبدالله", "تدخل حضري", "إنشاء ذاتي", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [159, "بلدية فيفا", "مطل جارة القمر ", "حديقة", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [160, "بلدية قوز الجعافرة ", "ممشى البحر", "تدخل حضري", "إنشاء ذاتي", 0, "مرحلة المراجعة", "جاري اعتماد التصاميم", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [161, "بلدية قوز الجعافرة ", "حديقة الرجيع", "حديقة", "إستثمار", 0, "معتمد", "جاري إعتماد  التصاميم", "تحت إجراءات الطرح", "ـــــــــــــــــــــــ"], [162, "بلدية قوز الجعافرة ", "حديقة الواجهة البحرية", "حديقة", "إستثمار", 0, "مرحلة إعداد التصاميم", "جاري اعداد التصاميم", "تحت إجراءات الطرح", "ـــــــــــــــــــــــ"], [163, "بلدية قوز الجعافرة ", "طريق الأثلة", "تدخل حضري", "إنشاء ذاتي", 0.58, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [164, "بلدية قوز الجعافرة ", "طريق مدخل البلدية", "تدخل حضري", "إنشاء ذاتي", 0.15, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [165, "بلدية قوز الجعافرة ", "ممشى طريق الملك فهد", "تدخل حضري", "مشاركة مجتمعية", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ8/2/2026"], [166, "بلدية قوز الجعافرة ", "حديقة أبو الطيور", "حديقة", "إنشاء ذاتي", 0.48, "معتمد", "تحت التنفيذ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [167, "بلدية قوز الجعافرة ", "حديقة عوانه", "حديقة", "إنشاء ذاتي", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [168, "بلدية هروب", "حديقة منجد", "حديقة", "إنشاء ذاتي", 0, "معتمد", "لا توجد تكاليف حسب إفادة البلدية بخطابهم رقم 4700658228", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [169, "بلدية هروب", "حديقة مطل الأمير محمد بن عبدالعزيز", "حديقة", "إنشاء ذاتي", 0, "مرحلة معالجة الملاحظات", "جاري معالجة الملاحظات", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [170, "بلدية هروب", "طريق الملك عبدالله 1(ممشى دوار الكتاب)", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [171, "بلدية هروب", "طريق الملك سلمان 1( ممشى السوق)", "تدخل حضري", "إنشاء ذاتي", 0, "معتمد", "تحت إجراءات الطرح والترسية والتعاقد ", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"], [172, "بلدية وادي جازان", "حديقة البختة ", "حديقة", "مشاركة مجتمعية", 0, "معتمد", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ", "تم توقيع عقد االمشاركة بتاريخ1/4/2026"], [173, "بلدية وادي جازان", "حديقة الواصلي", "حديقة", "إستثمار", 0, "معتمد", "ـــــــــــــــــــــــ", "تم الطرح", "ـــــــــــــــــــــــ"], [174, "بلدية وادي جازان", "ممشى البديع والقرفي", "تدخل حضري", "إنشاء ذاتي", 1, "معتمد", "مكتمل", "ـــــــــــــــــــــــ", "ـــــــــــــــــــــــ"]]};
+const $=i=>document.getElementById(i);
+const PAL=['#2f8f89','#123039','#3c908c','#5fb8b3','#0e4a48','#93b1ae','#7fc3bd','#1a4d4a','#b7d6d3','#0a2d2c'];
+let DS=null,f={},CU=[],EX={},FC={rate:8,lag:6};
+try{CU=JSON.parse(localStorage.getItem('gd_cu')||'[]')}catch(_){}
+const svCU=()=>{try{localStorage.setItem('gd_cu',JSON.stringify(CU))}catch(_){}};
+
+/* ---------- parsing ---------- */
+function findHeaderRow(aoa){
+  let best=0,bestScore=-1e9;
+  for(let i=0;i<Math.min(15,aoa.length);i++){
+    const row=aoa[i];if(!row||!row.length)continue;
+    let str=0,num=0,ne=0;
+    row.forEach(c=>{if(c===''||c==null)return;ne++;if(typeof c==='number'||c instanceof Date)num++;else str++});
+    if(ne<2)continue;
+    const score=str-num*2+ne*0.15;
+    if(score>bestScore){bestScore=score;best=i}
+  }
+  return best;
+}
+function parseWorkbook(wb){
+  const names=wb.SheetNames.filter(n=>{const s=wb.Sheets[n];return s&&s['!ref']});
+  let bestSheet=names[0],bestCells=0;
+  names.forEach(n=>{const s=wb.Sheets[n],aoa=XLSX.utils.sheet_to_json(s,{header:1,defval:'',raw:true});const cells=aoa.reduce((a,r)=>a+r.filter(c=>c!==''&&c!=null).length,0);if(cells>bestCells){bestCells=cells;bestSheet=n}});
+  const aoa=XLSX.utils.sheet_to_json(wb.Sheets[bestSheet],{header:1,defval:'',raw:true});
+  const hi=findHeaderRow(aoa);
+  const headers=aoa[hi].map((c,i)=>{const s=(c==null?'':String(c).trim());return s||('عمود '+(i+1))});
+  const seen={};
+  const H=headers.map(h=>{if(seen[h]==null){seen[h]=0;return h}seen[h]++;return h+' ('+(seen[h]+1)+')'});
+  const rows=aoa.slice(hi+1).filter(r=>r&&r.some(c=>c!==''&&c!=null)).map(r=>{const o=r.slice(0,H.length);while(o.length<H.length)o.push('');return o});
+  return{headers:H,rows,sheet:bestSheet};
+}
+function parseNum(v){
+  if(typeof v==='number')return v;
+  if(v==null)return null;
+  const s=String(v).trim();if(!s)return null;
+  const pct=s.includes('%');
+  const cleaned=s.replace(/[%\s,]/g,'');
+  if(!/^-?\d+(\.\d+)?$/.test(cleaned))return null;
+  const n=parseFloat(cleaned);
+  return pct?n/100:n;
+}
+function classify(headers,rows){
+  return headers.map((h,ci)=>{
+    const raw=rows.map(r=>r[ci]).filter(v=>v!==undefined&&v!==null&&String(v).trim()!=='');
+    const total=raw.length;
+    if(!total)return{name:h,idx:ci,type:'empty'};
+    let dateC=0,numC=0,fracC=0;const nums=[];
+    raw.forEach(v=>{
+      if(v instanceof Date){dateC++;return}
+      if(typeof v==='number'){numC++;nums.push(v);if(v>=0&&v<=1)fracC++;return}
+      const s=String(v).trim();
+      if(/^\d{4}-\d{1,2}(-\d{1,2})?$/.test(s)||/^\d{1,2}\/\d{1,2}\/\d{2,4}$/.test(s)){dateC++;return}
+      const n=parseNum(s);
+      if(n!==null){numC++;nums.push(n);if(s.includes('%')||(n>=0&&n<=1))fracC++}
+    });
+    const distinctSet=new Set(raw.map(v=>v instanceof Date?v.getTime():String(v).trim()));
+    const distinct=distinctSet.size;
+    if(dateC/total>0.6)return{name:h,idx:ci,type:'date'};
+    if(numC/total>0.6){
+      const isPct=fracC/numC>0.5;
+      return{name:h,idx:ci,type:isPct?'percent':'number',min:Math.min(...nums),max:Math.max(...nums)};
+    }
+    if(distinct<=30||distinct/total<0.5)return{name:h,idx:ci,type:'category',distinct};
+    return{name:h,idx:ci,type:'text',distinct};
+  });
+}
+function getDate(v){if(v instanceof Date&&!isNaN(v))return v;if(typeof v==='string'){const m=v.match(/(\d{4})-(\d{1,2})(?:-(\d{1,2}))?/);if(m)return new Date(+m[1],+m[2]-1,+(m[3]||1));const m2=v.match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);if(m2)return new Date(+m2[3],+m2[2]-1,+m2[1])}return null}
+function getNum(v){return typeof v==='number'?v:parseNum(v)}
+function getCat(v){return v==null?'':String(v).trim()}
+
+/* ---------- dataset load ---------- */
+function loadDataset(headers,rows,name){
+  const cols=classify(headers,rows);
+  DS={headers,rows,cols,name};
+  f={};CU=[];svCU();
+  try{
+    const small=rows.length<=3000;
+    if(small)localStorage.setItem('gd_data',JSON.stringify({headers,rows:rows.map(r=>r.map(v=>v instanceof Date?v.toISOString():v)),name}));
+  }catch(_){}
+  $('ttl').textContent='لوحة تحليل البيانات';
+  $('src').textContent='الملف: '+name+' — '+rows.length+' صف، '+headers.length+' عمود';
+  renderAll();
+}
+
+/* ---------- filtering ---------- */
+function catCols(){return DS.cols.filter(c=>c.type==='category')}
+function numCols(){return DS.cols.filter(c=>c.type==='number'||c.type==='percent')}
+function filteredRows(){
+  const q=($('q')&&$('q').value||'').trim().toLowerCase();
+  return DS.rows.filter(r=>{
+    for(const k in f){if(f[k]!==''&&getCat(r[k])!==f[k])return false}
+    if(!q)return true;
+    return r.some(v=>String(v==null?'':v).toLowerCase().includes(q));
+  });
+}
+
+/* ---------- forecast ---------- */
+function pickForecastCol(){
+  const kw=['نسبة','تقدم','انجاز','إنجاز','progress','percent','completion'];
+  let p=DS.cols.find(c=>c.type==='percent'&&kw.some(k=>c.name.toLowerCase().includes(k)));
+  if(!p)p=DS.cols.find(c=>c.type==='percent');
+  if(!p)p=DS.cols.find(c=>c.type==='number');
+  return p;
+}
+function pickDateCol(){
+  const kw=['تاريخ','date','start','due','target','deadline','موعد'];
+  let d=DS.cols.find(c=>c.type==='date'&&kw.some(k=>c.name.toLowerCase().includes(k)));
+  if(!d)d=DS.cols.find(c=>c.type==='date');
+  return d;
+}
+function fcValue(col,v){
+  if(col.type==='percent')return Math.max(0,Math.min(1,getNum(v)||0));
+  const n=getNum(v);if(n==null)return 0;
+  const span=(col.max-col.min)||1;
+  return Math.max(0,Math.min(1,(n-col.min)/span));
+}
+function renderForecast(rs){
+  const pc=pickForecastCol();
+  const box=$('fcbox');
+  if(!pc){box.innerHTML='<div class="n">لا يوجد عمود رقمي (نسبة إنجاز أو ما شابه) في هذا الملف لعمل تنبؤ.</div>';delete EX.fc;return}
+  const dc=pickDateCol();
+  const vals=rs.map(r=>fcValue(pc,r[pc.idx]));
+  const n=rs.length||1;
+  const r=FC.rate/100,L=FC.lag,H=12;
+  let baseDates=null;
+  if(dc){
+    baseDates=rs.map(r2=>getDate(r2[dc.idx]));
+  }
+  const now=new Date();
+  const lb=['الآن'];
+  let ly=now.getFullYear(),lm=now.getMonth();
+  for(let k=1;k<=H;k++){lm++;if(lm>11){lm=0;ly++}lb.push(ly+'-'+String(lm+1).padStart(2,'0'))}
+  const pr=(p0,k,d)=>{
+    if(p0>=1)return 1;
+    if(p0>0)return Math.min(1,p0+r*k);
+    let delay=L;
+    if(d){const months=(now.getFullYear()-d.getFullYear())*12+(now.getMonth()-d.getMonth());delay=Math.max(0,L-months)}
+    return k>delay?Math.min(1,r*(k-delay)):0;
+  };
+  const st=k=>{let s=0,c=0;vals.forEach((p0,i)=>{const d=baseDates?baseDates[i]:null;const p=pr(p0,k,d);s+=p;if(p>=1)c++});return[s/n*100,c]};
+  const av=[],dn=[];for(let k=0;k<=H;k++){const z=st(k);av.push(z[0]);dn.push(z[1])}
+  let kA=-1;for(let k=0;k<=240;k++)if(st(k)[1]==n){kA=k;break}
+  const dp=dn.map(c=>c/n*100);
+  const X0=k=>35+k*(550/H),Y=v=>165-v*1.45,P=a=>a.map((v,k)=>X0(k).toFixed(1)+','+Y(v).toFixed(1)).join(' ');
+  EX.fc={n:'تنبؤ',rows:[['الشهر','متوسط %','نسبة مكتملة %','عدد مكتمل']].concat(lb.map((l,k)=>[l,Math.round(av[k]*10)/10,Math.round(dp[k]*10)/10,dn[k]]))};
+  const svg='<svg viewBox="0 0 600 190" style="width:100%">'+[0,50,100].map(v=>'<line x1="35" x2="585" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="var(--bd)"/><text x="30" y="'+(Y(v)+3)+'" text-anchor="end">'+v+'%</text>').join('')+'<polyline fill="none" stroke="var(--ac)" stroke-width="2.5" points="'+P(av)+'"/><polyline fill="none" stroke="var(--ac2)" stroke-width="2.5" stroke-dasharray="5 4" points="'+P(dp)+'"/>'+[0,6,12].map(k=>'<text x="'+X0(k)+'" y="182" text-anchor="'+(k==0?'start':k==12?'end':'middle')+'">'+lb[k]+'</text>').join('')+'<text x="'+(X0(0)+4)+'" y="'+(Y(av[0])-6)+'">'+Math.round(av[0])+'%</text><text x="'+X0(H)+'" y="'+(Y(av[H])-6)+'" text-anchor="end">'+Math.round(av[H])+'%</text></svg>';
+  const note='<span style="color:var(--ac)">━ متوسط '+pc.name+'</span> · <span style="color:var(--ac2)">┅ نسبة مكتمل 100%</span><br>بعد 12 شهراً: المتوسط ≈'+Math.round(av[H])+'% ويكتمل '+dn[H]+' من '+n+(kA>=0?'، وتكتمل الكل خلال ≈'+kA+' شهراً':'، ولا تكتمل الكل خلال 20 سنة')+'.'+(dc?' الاحتساب يعتمد على تواريخ عمود «'+dc.name+'».':' لا يوجد عمود تاريخ في الملف، لذلك الاحتساب يفترض أن العناصر غير المكتملة تبدأ بعد فترة التأخير المحددة أدناه.')+(pc.type!=='percent'?' (تم تطبيع عمود «'+pc.name+'» بين أدنى وأعلى قيمة لتقدير نسبة التقدم).':'');
+  box.innerHTML='<div class="n" style="margin:0 0 4px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center"><label>معدل التقدم الشهري <input type="range" id="rt" min="1" max="25" step="0.5" value="'+FC.rate+'"> <b>'+FC.rate+'%</b></label>'+(dc?'':'<label>تأخر بدء العناصر غير المبدوءة <input type="range" id="lg" min="0" max="18" step="1" value="'+FC.lag+'"> <b>'+FC.lag+'</b> شهر</label>')+'</div>'+svg+'<div class="n">'+note+'</div>';
+  const rtEl=$('rt');if(rtEl)rtEl.oninput=e=>{FC.rate=+e.target.value;renderAll(true)};
+  const lgEl=$('lg');if(lgEl)lgEl.oninput=e=>{FC.lag=+e.target.value;renderAll(true)};
+}
+
+/* ---------- generic charts ---------- */
+function barCard(id,title,label,vals,total){
+  const mx=Math.max(...vals.map(v=>v[1]),1);
+  EX[id]={n:title,rows:[[label,'العدد','النسبة %']].concat(vals.map(([l,v])=>[l,v,Math.round(v/total*100)]))};
+  const shown=vals.slice(0,15);
+  const extra=vals.length>15?'<div class="n">+ '+(vals.length-15)+' فئة أخرى</div>':'';
+  return'<div class="c"><h2>'+title+'<button class="e" data-k="'+id+'">⬇ Excel</button></h2><div class="bd">'+shown.map(([l,v])=>'<div class="r"><span>'+l+'</span><i><u style="width:'+(v/mx*100)+'%"></u></i><em>'+v+' ('+Math.round(v/total*100)+'%)</em></div>').join('')+extra+'</div></div>';
+}
+function categoryCard(col,rs){
+  const counts={};
+  rs.forEach(r=>{const v=getCat(r[col.idx])||'(فارغ)';counts[v]=(counts[v]||0)+1});
+  const vals=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
+  return barCard('cat'+col.idx,col.name,col.name,vals,rs.length||1);
+}
+function numDistCard(col,rs){
+  const nums=rs.map(r=>getNum(r[col.idx])).filter(n=>n!=null);
+  if(!nums.length)return'';
+  let min=Math.min(...nums),max=Math.max(...nums);if(min===max)max=min+1;
+  const bins=6,w=(max-min)/bins;
+  const counts=Array(bins).fill(0);
+  nums.forEach(n=>{let b=Math.floor((n-min)/w);if(b>=bins)b=bins-1;if(b<0)b=0;counts[b]++});
+  const fmt=v=>col.type==='percent'?Math.round(v*100)+'%':(Math.round(v*100)/100);
+  const vals=counts.map((c,i)=>[fmt(min+i*w)+' – '+fmt(min+(i+1)*w),c]);
+  return barCard('num'+col.idx,col.name+' (توزيع)',col.name,vals,nums.length);
+}
+
+/* ---------- custom charts ---------- */
+function mv(rs,col,agg){
+  if(agg==='cnt')return rs.length;
+  if(!col)return rs.length;
+  const nums=rs.map(r=>getNum(r[col.idx])).filter(n=>n!=null);
+  if(agg==='avg')return nums.length?Math.round(nums.reduce((a,b)=>a+b,0)/nums.length*(col.type==='percent'?100:1)*100)/100:0;
+  if(agg==='sum')return Math.round(nums.reduce((a,b)=>a+b,0)*100)/100;
+  return rs.length;
+}
+function cu(rs){
+  const cats=catCols();
+  $('cu').innerHTML=CU.map((d,i)=>{
+    const dim=cats.find(c=>c.idx==d.d)||cats[0];if(!dim)return'';
+    const metCol=numCols().find(c=>c.idx==d.m);
+    const groups={};
+    rs.forEach(r=>{const v=getCat(r[dim.idx])||'(فارغ)';(groups[v]=groups[v]||[]).push(r)});
+    const L=Object.entries(groups).map(([l,g])=>[l,mv(g,metCol,d.agg)]).sort((a,b)=>b[1]-a[1]).slice(0,15);
+    const mx=Math.max(...L.map(a=>a[1]),1),tot=L.reduce((a,b)=>a+b[1],0),id='cu'+d.id;
+    const metName=metCol?metCol.name+' ('+d.agg+')':'العدد';
+    EX[id]={n:'شارت'+(i+1),rows:[[dim.name,metName]].concat(L)};
+    let b='';
+    if(d.t=='col')b='<div style="display:flex;align-items:flex-end;gap:6px;height:220px;min-width:max-content;font-size:10px;overflow-x:auto">'+L.map(([l,v])=>'<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;width:52px"><span>'+v+'</span><u style="display:block;width:26px;height:'+(v/mx*65)+'%;background:var(--ac);border-radius:4px 4px 0 0"></u><span style="color:var(--mu);text-align:center;margin-top:3px;height:28px;overflow:hidden">'+l+'</span></div>').join('')+'</div>';
+    else if(d.t=='pie'){let a=0;const g=tot?L.filter(x=>x[1]>0).map((x,j)=>{const s=a;a+=x[1]/tot*100;return PAL[j%10]+' '+s+'% '+a+'%'}).join(','):'var(--bd) 0 100%';b='<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><div style="width:150px;height:150px;border-radius:50%;flex:none;background:conic-gradient('+g+')"></div><div style="font-size:12px">'+L.filter(x=>x[1]>0).map((x,j)=>'<div><span style="color:'+PAL[j%10]+'">■</span> '+x[0]+': '+x[1]+'</div>').join('')+'</div></div>'}
+    else b=L.map(([l,v])=>'<div class="r"><span>'+l+'</span><i><u style="width:'+(v/mx*100)+'%"></u></i><em>'+v+'</em></div>').join('');
+    return'<div class="c'+(i==CU.length-1&&CU.length%2?' w':'')+'"><h2>'+metName+' حسب '+dim.name+'<span><button class="e" data-k="'+id+'">⬇ Excel</button> <button class="e" data-del="'+d.id+'">✕</button></span></h2><div class="bd">'+b+'</div></div>'}).join('')
+}
+
+/* ---------- table ---------- */
+function tableCard(rs){
+  const cols=DS.headers;
+  EX.tb={n:'البيانات',rows:[cols].concat(rs.map(r=>r.map(v=>v instanceof Date?v.toLocaleDateString('ar'):v)))};
+  const shown=rs.slice(0,150);
+  return'<div class="c w"><h2>نتائج البحث <span>('+rs.length+')</span><button class="e" data-k="tb">⬇ Excel</button></h2><div class="bd tbl-wrap"><table><thead><tr>'+cols.map(c=>'<th>'+c+'</th>').join('')+'</tr></thead><tbody>'+shown.map(r=>'<tr>'+r.map(v=>'<td>'+(v instanceof Date?v.toLocaleDateString('ar'):(v==null?'':v))+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>'+(rs.length>150?'<div class="n">عرض أول 150 صف من '+rs.length+'</div>':'')+'</div>'
+}
+
+/* ---------- top bar & kpis ---------- */
+function topBar(){
+  const cats=catCols().slice(0,3);
+  return'<div class="dz" id="dz"><b>📁 اسحب وأفلت ملف Excel هنا</b> أو اضغط للاختيار — أي ملف، أي أعمدة<input id="fi" type="file" accept=".xlsx,.xls,.csv" hidden></div>'+
+  '<div class="bar"><input id="q" class="q" placeholder="🔍 ابحث في كل الأعمدة...">'+
+  cats.map(c=>'<select data-f="'+c.idx+'"><option value="">'+c.name+' (الكل)</option>'+[...new Set(DS.rows.map(r=>getCat(r[c.idx])).filter(Boolean))].sort().map(v=>'<option value="'+v+'"'+(f[c.idx]===v?' selected':'')+'>'+v+'</option>').join('')+'</select>').join('')+
+  '<button id="x">إعادة ضبط</button><button id="nw">➕ شارت جديد</button><button class="e" id="ea">⬇ تصدير الكل</button></div>';
+}
+function kpis(rs){
+  const nc=numCols().slice(0,4);
+  const tiles=[[rs.length,'إجمالي الصفوف']].concat(nc.map(c=>{
+    const nums=rs.map(r=>getNum(r[c.idx])).filter(n=>n!=null);
+    const avg=nums.length?nums.reduce((a,b)=>a+b,0)/nums.length:0;
+    return[c.type==='percent'?Math.round(avg*100)+'%':Math.round(avg*100)/100,'متوسط '+c.name];
+  }));
+  EX.k={n:'المؤشرات',rows:[['المؤشر','القيمة']].concat(tiles.map(a=>[a[1],a[0]]))};
+  return'<div class="kpis">'+tiles.map(a=>'<div class="k"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>').join('')+'</div>';
+}
+
+/* ---------- new chart builder panel ---------- */
+function newChartPanel(){
+  const cats=catCols(),nums=numCols();
+  return'<div class="c" id="nb" style="display:none;height:auto;margin-bottom:10px"><h2>إنشاء شارت جديد</h2><div class="bar">'+
+  '<select id="nd">'+cats.map(c=>'<option value="'+c.idx+'">'+c.name+'</option>').join('')+'</select>'+
+  '<select id="nm"><option value="">عدد الصفوف</option>'+nums.map(c=>'<option value="'+c.idx+'">متوسط '+c.name+'</option>').join('')+'</select>'+
+  '<select id="nt"><option value="bar">أعمدة أفقية</option><option value="col">أعمدة رأسية</option><option value="pie">دائري</option></select>'+
+  '<button id="na">إضافة</button></div></div>';
+}
+
+/* ---------- render ---------- */
+function renderAll(keepScroll){
+  if(!DS)return;
+  const app=$('app');
+  const rs=filteredRows();
+  let html=topBar()+kpis(rs)+newChartPanel();
+  html+='<div class="grid"><div class="c w"><h2>تنبؤ — 12 شهراً القادمة</h2><div class="bd" id="fcbox"></div></div>';
+  const cats=catCols().filter(c=>c.distinct>=2).slice(0,6);
+  cats.forEach(c=>html+=categoryCard(c,rs));
+  numCols().slice(0,3).forEach(c=>{const card=numDistCard(c,rs);if(card)html+=card});
+  html+=tableCard(rs);
+  html+='<div id="cu" style="display:contents"></div></div>';
+  app.innerHTML=html;
+  renderForecast(rs);
+  cu(rs);
+  wireEvents();
+}
+
+function wireEvents(){
+  const q=$('q');if(q)q.oninput=()=>renderAll(true);
+  document.querySelectorAll('[data-f]').forEach(sel=>{sel.onchange=e=>{f[e.target.dataset.f]=e.target.value;renderAll(true)}});
+  const x=$('x');if(x)x.onclick=()=>{f={};renderAll()};
+  const nw=$('nw');if(nw)nw.onclick=()=>{const p=$('nb');p.style.display=p.style.display==='none'?'block':'none'};
+  const na=$('na');if(na)na.onclick=()=>{const d=+$('nd').value,mI=$('nm').value,m=mI===''?null:+mI,t=$('nt').value;CU.push({id:Date.now(),d,m,agg:'avg',t});svCU();$('nb').style.display='none';renderAll(true)};
+  const fi=$('fi');if(fi)fi.onchange=handleFile;
+  const dz=$('dz');
+  if(dz){
+    dz.onclick=()=>$('fi')&&$('fi').click();
+    dz.ondragover=e=>{e.preventDefault();dz.classList.add('drag')};
+    dz.ondragleave=()=>dz.classList.remove('drag');
+    dz.ondrop=e=>{e.preventDefault();dz.classList.remove('drag');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0])};
+  }
+}
+async function handleFile(e){const fl=e.target.files[0];if(fl)await loadFile(fl);e.target.value=''}
+async function loadFile(fl){
+  await waitXLSX();
+  if(typeof XLSX==='undefined'){alert('تعذّر تحميل مكتبة قراءة Excel من الإنترنت. تحقق من الاتصال ثم أعد المحاولة.');return}
+  try{
+    const buf=await fl.arrayBuffer();
+    const wb=XLSX.read(buf,{type:'array',cellDates:true});
+    const{headers,rows}=parseWorkbook(wb);
+    if(!headers.length||!rows.length)throw new Error('الملف فارغ أو غير مقروء');
+    loadDataset(headers,rows,fl.name);
+  }catch(err){alert('تعذّر تحليل الملف: '+err.message)}
+}
+async function waitXLSX(){for(let w=0;w<25&&typeof XLSX=='undefined';w++)await new Promise(r=>setTimeout(r,200))}
+
+/* ---------- export ---------- */
+async function ex(ks){
+  ks=ks.filter(k=>EX[k]);if(!ks.length)return;
+  await waitXLSX();
+  if(typeof XLSX=='undefined'){alert('تعذّر تحميل مكتبة تصدير Excel (XLSX) من الإنترنت. تأكد من اتصالك بالإنترنت، أو أن أي أداة حجب إعلانات/محتوى لا تمنع تحميل ملفات JS خارجية، ثم أعد تحميل الصفحة وحاول مجدداً.');return}
+  const wb=XLSX.utils.book_new();
+  ks.forEach(k=>XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(EX[k].rows),EX[k].n.slice(0,31)));
+  wb.Workbook={Views:[{RTL:true}]};
+  const fn=(ks.length>1?'تصدير-كل-الجداول':EX[ks[0]].n)+'.xlsx';
+  try{if(typeof claude!=='undefined'&&claude.use){const dl=await claude.use('downloads');if(dl){await dl.save({filename:fn,data:XLSX.write(wb,{type:'array',bookType:'xlsx'})});return}}}catch(e){}
+  try{const arr=XLSX.write(wb,{type:'array',bookType:'xlsx'});const blob=new Blob([arr],{type:'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=fn;document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(()=>URL.revokeObjectURL(url),1000)}catch(e){alert('تعذر التصدير: '+e.message)}
+}
+document.addEventListener('click',e=>{
+  const t=e.target;
+  const k=t.dataset&&t.dataset.k;if(k)ex([k]);
+  if(t.id=='ea')ex(Object.keys(EX));
+  if(t.dataset&&t.dataset.del){CU=CU.filter(d=>d.id!=t.dataset.del);svCU();renderAll(true)}
+});
+
+/* ---------- init ---------- */
+(function init(){
+  let loaded=false;
+  try{
+    const s=JSON.parse(localStorage.getItem('gd_data')||'null');
+    if(s&&s.headers&&s.rows){
+      const rows=s.rows.map(r=>r.map(v=>{if(typeof v==='string'&&/^\d{4}-\d{2}-\d{2}T/.test(v)){const d=new Date(v);return isNaN(d)?v:d}return v}));
+      loadDataset(s.headers,rows,s.name+' (محفوظ)');
+      loaded=true;
+    }
+  }catch(_){}
+  if(!loaded){
+    const rows=DEFAULT_DS.rows.map(r=>r.map(v=>{if(typeof v==='string'&&/^\d{4}-\d{2}-\d{2}T/.test(v)){const d=new Date(v);return isNaN(d)?v:d}return v}));
+    loadDataset(DEFAULT_DS.headers,rows,'تحديث مشاريع بهجة (نموذج افتراضي)');
+  }
+})();
+
+</script>
+</body></html>
