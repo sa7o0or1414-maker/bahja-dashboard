@@ -1,1 +1,1 @@
-# bahja-dashboard
+# generic_dashboard
